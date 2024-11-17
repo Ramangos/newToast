@@ -1,16 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        // Add the plugin classpath here
-        classpath 'com.android.tools.build:gradle:7.5.0'   // example version
-    }
-}
-
 plugins {
-    alias(libs.plugins.android.application) apply false
+alias(libs.plugins.android.application) apply false
     alias(libs.plugins.android.library) apply false
 }
