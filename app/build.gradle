@@ -24,8 +24,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 }
 
@@ -47,7 +47,7 @@ publishing {
             from components.findByName("release")  // Correct reference to the release component
             groupId = 'com.github.Ramangos'
             artifactId = 'newToast'
-            version = '2.0'
+            version = '3.0'
 
             // Optionally include sources/javadoc jars
             artifact("$buildDir/outputs/aar/${project.name}-release.aar")
