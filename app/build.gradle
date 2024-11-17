@@ -47,7 +47,7 @@ publishing {
             from components.findByName("release")  // Correct reference to the release component
             groupId = 'com.github.Ramangos'
             artifactId = 'newToast'
-            version = '3.0'
+            version = '4.0'
 
             // Optionally include sources/javadoc jars
             artifact("$buildDir/outputs/aar/${project.name}-release.aar")
