@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id 'maven-publish'  // Apply the maven-publish plugin here
 }
 
 android {
@@ -29,7 +30,6 @@ android {
 }
 
 dependencies {
-
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
@@ -38,4 +38,19 @@ dependencies {
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
     implementation project(':Customtoaster')
+}
+
+// Maven Publishing Configuration
+publishing {
+    publications {
+        release(MavenPublication) {
+            from components.findByName("release")  // Correct reference to the release component
+            groupId = 'com.github.Ramangos'
+            artifactId = 'newToast'
+            version = '2.0'
+
+            // Optionally include sources/javadoc jars
+            artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+        }
+    }
 }
