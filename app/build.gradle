@@ -11,8 +11,8 @@ android {
         applicationId "com.nntechincal.newtoast"
         minSdk 24
         targetSdk 34
-        versionCode 6
-        versionName "9.0"
+        versionCode 9
+        versionName "10.0"
         consumerProguardFiles 'proguard-rules.pro'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -38,6 +38,7 @@ dependencies {
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
     implementation project(':Customtoaster')
+    //implementation 'com.github.Ramangos:newToast:9.0'
 }
 
 // Maven Publishing Configuration
@@ -47,7 +48,7 @@ publishing {
             from components.findByName("release")  // Correct reference to the release component
             groupId = 'com.github.Ramangos'
             artifactId = 'newToast'
-            //version = '8.0'
+            version = '10.0'
 
             // Optionally include sources/javadoc jars
             //artifact("$buildDir/outputs/aar/${project.name}-release.aar")
