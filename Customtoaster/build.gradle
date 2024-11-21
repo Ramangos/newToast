@@ -1,6 +1,12 @@
+//plugins {
+//    alias(libs.plugins.android.library)
+//}
+
 plugins {
-    alias(libs.plugins.android.library)
+    id 'com.android.library'  // Correct for a library project
+    id 'maven-publish'        // Apply the maven-publish plugin here for publishing
 }
+
 
 android {
     namespace 'com.nntechincal.customtoaster'

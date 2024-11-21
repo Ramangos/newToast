@@ -12,7 +12,7 @@ android {
         minSdk 24
         targetSdk 34
         versionCode 9
-        versionName "10.0"
+        versionName "11.0"
         consumerProguardFiles 'proguard-rules.pro'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -50,7 +50,7 @@ publishing {
             from components.findByName("release")  // Correct reference to the release component
             groupId = 'com.github.Ramangos'
             artifactId = 'newToast'
-            version = '10.0'
+            version = '11.0'
 
             // Optionally include sources/javadoc jars
             //artifact("$buildDir/outputs/aar/${project.name}-release.aar")
