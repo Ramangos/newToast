@@ -1,21 +1,19 @@
-# Custom Toast - newToast
+# Custom Toast Library
 
 A simple Android library for displaying colored custom toasts.
 
-Step 1. Add the JitPack repository to your build file
+## Installation
 
-dependencyResolutionManagement {
-		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-		repositories {
-			mavenCentral()
-			maven { url 'https://jitpack.io' }
-		}
-	}
+### Step 1: Add JitPack to your project-level `build.gradle` or `settings.gradle` file.
 
- Step 2. Add the dependency
+```gradle
+repositories {
+    maven { url 'https://jitpack.io' }
+}
 
- dependencies {
-	        implementation 'com.github.Ramangos:newToast:12.0'
-	}
+### Step 2: Add the dependency
 
- [![](https://jitpack.io/v/Ramangos/newToast.svg)](https://jitpack.io/#Ramangos/newToast)
+dependencies {
+ implementation 'com.github.Ramangos:newToast:12.0'
+}
+
