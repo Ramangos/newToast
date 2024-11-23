@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
-    id 'maven-publish'  // Apply the maven-publish plugin here
+    //id 'com.android.library'
+    //id 'maven-publish'  // Apply the maven-publish plugin here
 }
 
 android {
@@ -11,8 +12,8 @@ android {
         applicationId "com.nntechincal.newtoast"
         minSdk 24
         targetSdk 34
-        versionCode 9
-        versionName "12.0"
+        versionCode 11
+        versionName "14.0"
         consumerProguardFiles 'proguard-rules.pro'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -39,21 +40,21 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
-    implementation project(':Customtoaster')
+    //implementation project(':Customtoaster')
     //implementation 'com.github.Ramangos:newToast:9.0'
 }
 
 // Maven Publishing Configuration
-publishing {
-    publications {
-        release(MavenPublication) {
-            from components.findByName("release")  // Correct reference to the release component
-            groupId = 'com.github.Ramangos'
-            artifactId = 'newToast'
-            version = '12.0'
-
-            // Optionally include sources/javadoc jars
-            //artifact("$buildDir/outputs/aar/${project.name}-release.aar")
-        }
-    }
-}
+//publishing {
+//    publications {
+//        release(MavenPublication) {
+//            from components.findByName("release")  // Correct reference to the release component
+//            groupId = 'com.github.Ramangos'
+//            artifactId = 'newToast'
+//            version = '12.0'
+//
+//            // Optionally include sources/javadoc jars
+//            //artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+//        }
+//    }
+//}
