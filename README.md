@@ -1,17 +1,18 @@
-Installation
-Step 1: Add JitPack to your Project-Level build.gradle or settings.gradle
-Add the JitPack repository to your project-level Gradle file:
+# Custom Toast Library
+
+A simple Android library for displaying colored custom toasts.
+
+## Installation
+
+### **Step 1: Add JitPack to your project-level build.gradle or settings.gradle file**
 
 gradle
-Copy code
 repositories {
     maven { url 'https://jitpack.io' }
 }
-Step 2: Add the Dependency
-Include the library in your app-level build.gradle file:
 
-gradle
-Copy code
+### **Step 2: Add the dependency**
+
 dependencies {
-    implementation 'com.github.Ramangos:newToast:12.0'
+	implementation 'com.github.Ramangos:newToast:12.0'
 }
